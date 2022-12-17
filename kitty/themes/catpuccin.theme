@@ -1,0 +1,50 @@
+# Catpuccin Theme
+
+foreground                    #D9E0EE
+background                    #1A1826
+selection_foreground          #C9CBFF
+selection_background          #161320
+
+cursor                        #ABE9B3
+cursor_text_color             #161320
+
+url_color                     #1E1D2F
+
+active_tab_foreground         #161320
+active_tab_background         #F5C2E7
+inactive_tab_foreground       #D9E0EE
+inactive_tab_background       #161320
+tab_bar_background            #1A1826
+
+mark1_foreground              #161320
+mark1_background              #F9C096
+mark2_foreground              #161320
+mark2_background              #F2CECF
+mark3_foreground              #161320
+mark3_background              #E5B4E2
+
+# black
+color0                        #575268
+color8                        #302D41
+# red
+color1                        #F28FAD
+color9                        #E8A2AF
+# green
+color2                        #ABE9B3
+color10                       #B5E8E0
+# yellow
+color3                        #FAE3B0
+color11                       #F8BD96
+# blue
+color4                        #96CDFB
+color12                       #89DCEB
+# magenta
+color5                        #F5C2E7
+color13                       #DDB6F2
+# cyan
+color6                        #F5E0DC
+color14                       #F2CDCD
+# white
+color7                        #D9E0EE
+color15                       #C9CBFF
+
