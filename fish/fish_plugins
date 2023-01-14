@@ -1,4 +1,6 @@
 jorgebucaran/fisher
 catppuccin/fish
+# Easily navigate to dirs (e.g `z prog` -> `~/Users/tobybridle/Desktop/Programming`)
 jethrokuan/z
+# LS Replacement
 gazorby/fish-exa

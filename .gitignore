@@ -31,8 +31,6 @@ adb
 alacritty
 configstore
 dotconfig
-Microsoft\*
-fish
-Microsoft\VisualStudio Services/8.0/Cache
-
-Microsoft\VisualStudio Services/8.0/Cache
+fish/*
+!fish/config.fish
+!fish/fish_plugins
