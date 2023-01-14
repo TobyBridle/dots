@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/TobyBridle/neovim-config
+[submodule ".git_template"]
+	path = .git_template
+	url = https://github.com/TobyBridle/git-template
