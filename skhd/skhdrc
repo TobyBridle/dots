@@ -13,12 +13,31 @@ shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 
-# Resizing Windows
+# color["focused"]="0xF0392d45"
+# color["normal"]="0x00000000"
+# color["preselect"]="0x00000000"
+# color["resize"]="0xFFFF00FF"
 
-alt + ctrl - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
-alt + ctrl - j : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
-alt + ctrl - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
-alt + ctrl - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
+# Resizing Windows
+:: default  : yabai -m config window_border "off"
+:: resize @ : yabai -m config window_border "on"
+# toggle resize mode 
+resize < hyper - r ; default
+default < hyper - r ; resize
+# resize commands
+resize < h : yabai -m window --resize left:-50:0; \
+                  yabai -m window --resize right:-50:0
+resize < j : yabai -m window --resize bottom:0:50; \
+                  yabai -m window --resize top:0:50
+resize < k   : yabai -m window --resize top:0:-50; \
+                  yabai -m window --resize bottom:0:-50
+resize < l : yabai -m window --resize right:50:0; \
+                  yabai -m window --resize left:50:0
+
+# alt + ctrl - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
+# alt + ctrl - j : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
+# alt + ctrl - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
+# alt + ctrl - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
 
 # Move focus container to workspace
 shift + alt - q : yabai -m window --space prev && skhd --key 'ctrl - left'
@@ -43,18 +62,19 @@ fn + shift - o : yabai -m window --opacity 1.0
 fn + cmd - o : yabai -m window --opacity 0.90
 
 # Rotate windows clockwise and anticlockwise
-hyper - r         : yabai -m space --rotate 270
-shift + hyper - r : yabai -m space --rotate 90 
+# NOTE: This no longer works as we are using `hyper - r` for resizing
+# hyper - r         : yabai -m space --rotate 270
+# shift + hyper - r : yabai -m space --rotate 90 
 
 # Rotate on X and Y Axis
-#shift + alt - x : yabai -m space --mirror x-axis
-#shift + alt - y : yabai -m space --mirror y-axis
+shift + alt - x : yabai -m space --mirror x-axis
+shift + alt - y : yabai -m space --mirror y-axis
 
 # Set insertion point for focused container
-#shift + lctrl + alt - a : yabai -m window --insert west
-#shift + lctrl + alt - s : yabai -m window --insert south
-#shift + lctrl + alt - w : yabai -m window --insert north
-#shift + lctrl + alt - d : yabai -m window --insert east
+hyper - a : yabai -m window --insert west
+hyper - s : yabai -m window --insert south
+hyper - n : yabai -m window --insert north
+hyper - e : yabai -m window --insert east
 
 # Float / Unfloat window
 shift + alt - space : \

@@ -7,9 +7,10 @@ mkdir $tempDir
 set -x
 
 declare -A color
-color["focused"]="0xE0808080"
+color["focused"]="0xF0392d45"
 color["normal"]="0x00000000"
-color["preselect"]="0xE02d74da"
+color["preselect"]="0x00000000"
+color["resize"]="0xFFFF00FF"
 
 # See: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#macos-big-sur---automatically-load-scripting-addition-on-startup
 sudo yabai --load-sa
@@ -17,8 +18,8 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 yabai -m config layout                      bsp
 
-yabai -m config top_padding                 25
-yabai -m config bottom_padding               5
+yabai -m config top_padding                 15
+yabai -m config bottom_padding              15
 yabai -m config left_padding                25
 yabai -m config right_padding               25
 yabai -m config window_gap                  15
@@ -36,7 +37,7 @@ yabai -m config active_window_border_color  "${color["focused"]}"
 yabai -m config normal_window_border_color  "none"
 yabai -m config insert_feedback_color       "${color["preselect"]}"
 
-yabai -m config active_window_opacity       0.90
+yabai -m config active_window_opacity       0.80
 yabai -m config normal_window_opacity       1.0
 yabai -m config split_ratio                 0.50
 
