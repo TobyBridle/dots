@@ -1,5 +1,5 @@
 # opens terminal
-alt - return : open -na kitty 
+alt - return : open -na WezTerm 
 
 # Navigation
 alt - h : yabai -m window --focus west
