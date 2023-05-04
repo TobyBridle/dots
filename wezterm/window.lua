@@ -3,10 +3,10 @@ local use_bg_image = false
 
 local padding = 60
 local window_padding = {
-  left = 60,
-  top = 60,
-  right = 60,
-  bottom = 60,
+  left = padding,
+  top = padding,
+  right = padding,
+  bottom = padding/3,
 }
 
 local M = {
