@@ -70,12 +70,6 @@ fn + cmd - o : yabai -m window --opacity 0.90
 shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - y : yabai -m space --mirror y-axis
 
-# Set insertion point for focused container
-hyper - a : yabai -m window --insert west
-hyper - s : yabai -m window --insert south
-hyper - n : yabai -m window --insert north
-hyper - e : yabai -m window --insert east
-
 # Float / Unfloat window
 shift + alt - space : \
     yabai -m window --toggle float; \
@@ -83,5 +77,5 @@ shift + alt - space : \
     yabai -m window --toggle border
 
 # Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
+hyper - f         : yabai -m window --toggle zoom-fullscreen
 # shift + alt - f : yabai -m window --toggle native-fullscreen
